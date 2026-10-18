@@ -1,0 +1,226 @@
+/*Default light mode colors*/
+:root{
+    --bg-color: #f4f7fb;
+    --text-color:#181b1e;
+    --card-color:#ffffff;
+    --primary-color:#685bc7;
+    --border-color:#fe572a;
+}
+
+/*Dark mode*/
+body.dark{
+    --bg-color: #121212;
+    --text-color:#f4f7fb;
+    --card-color:#1e1e1e;
+    --primary-color:#7c6ee7;
+    --border-color:#ff6d45;
+}
+
+/*general page styling*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/*header*/
+header{
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p{
+    max-width: 650px;
+    margin: 0 auto;
+    color:var(--bg-color);
+}
+
+/*theme button*/
+#theme{
+    display: block;
+    margin-left:auto;
+    margin-bottom: 10px;
+    padding:8px 14px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background-color: transparent;
+    color:white;
+    cursor:pointer;
+}
+
+/*Main content area*/
+main{
+    width: 90%;
+    max-width:1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+/* Space between the two sections */
+main section {
+    margin-bottom: 30px;
+}
+
+main h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* 5. Form layout using Flexbox */
+#note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #263238;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Visible focus when a field is selected */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+/* 6. Button styling */
+button {
+    padding: 11px 18px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+/* Required hover effect */
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* 7. Search field */
+#search-input {
+    margin: 5px 0 20px;
+}
+
+/* 8. Notes list */
+#notes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Every note is styled as a card */
+#notes-list li {
+    padding: 18px;
+    border: 1px solid #dbe3ef;
+    border-left: 5px solid #64748b;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    background-color: #f8fafc;
+    overflow-wrap: anywhere;
+}
+
+/* 9. Different styles for each category */
+#notes-list li.personal {
+    background-color: #fff7ed;
+    border-left-color: #f97316;
+}
+
+#notes-list li.work {
+    background-color: #eff6ff;
+    border-left-color: #2563eb;
+}
+
+#notes-list li.study {
+    background-color: #f0fdf4;
+    border-left-color: #16a34a;
+}
+
+/* Note count and error message */
+#note-count {
+    margin-top: 15px;
+    color: #475569;
+    font-weight: bold;
+}
+
+#error-message {
+    margin-top: 10px;
+    color: #dc2626;
+}
+
+/* 10. Footer styling */
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* 11. Responsive layout for small screens */
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    #notes-list li {
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
