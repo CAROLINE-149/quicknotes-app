@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+         <button id="theme"></button>
+        <h1>QuickNotes</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+       
+    </header>
+    <main class="card">
+        <section>
+            <h3>Add a Note</h3>
+            <form id="note-form">
+                <label for="note-input">Add a Note: </label>
+                <textarea id="note-input" rows="5" cols="40"></textarea>
+
+                <select id="note-category">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                </select>
+
+                <button type="submit">Add Note</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Your Notes</h3>
+
+            <label for="Search-input">Search: </label> 
+            <input id="search-input" placeholder="Search an item">
+
+            <ul id="notes-list"></ul>
+            <p id="note-count"></p>
+            <p id="error-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 QuickNotes</p>
+    </footer>
+    
+</body>
+</html>
